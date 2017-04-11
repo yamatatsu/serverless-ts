@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "npm run build && sls offline start",
+    "build": "tsc",
+    "deploy": "npm run build && sls deploy"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-lambda": "^0.0.10",
+    "serverless-offline": "^3.13.3"
+  }
+}
