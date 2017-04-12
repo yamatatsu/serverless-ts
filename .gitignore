@@ -5,3 +5,7 @@ jspm_packages
 # Serverless directories
 .serverless
 handler.js
+
+# webpack
+.built
+index.js

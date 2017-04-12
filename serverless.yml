@@ -5,15 +5,20 @@ provider:
   runtime: nodejs6.10
   stage: dev
   region: ap-northeast-1
+  environment:
+    PERMITTED_IPS: "any"
 
 plugins:
-  - serverless-offline
+  - serverless-webpack
+
+package:
+  include:
+    - node_modules/**
 
 functions:
   hello:
-    handler: handler.hello
+    handler: index.hello
     events:
        - http:
           path: hello
           method: get
-          cors: true

@@ -1,12 +1,18 @@
 {
   "scripts": {
-    "start": "npm run build && sls offline start",
-    "build": "tsc",
-    "deploy": "npm run build && sls deploy"
+    "start": "sls webpack serve",
+    "deploy": "sls deploy"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^0.0.10",
-    "serverless-offline": "^3.13.3"
+    "@types/node": "^7.0.12",
+    "serverless-webpack": "^1.0.0-rc.4",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.1.0",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3"
   }
 }
